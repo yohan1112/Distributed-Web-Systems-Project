@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home Page</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="homepage.css">
+        <script>
+            function initMap() {
+                // The location of some location
+                const statesboro = { lat: 32.4488, lng: -81.7832 };
+                // The map, centered at some location
+                const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 20,
+                center: statesboro,
+                });
+                // The marker, positioned at some location
+                const marker = new google.maps.Marker({
+                    position: statesboro,
+                    map: map,
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <div id="home-page">
+            <header id="header-container">
+                <div id="logo-container">
+                    <h1>BANDYL</h1>
+                </div>
+                <nav id="nav-access">
+                    <ul id="nav-list">
+                        <div id="menu-container">
+                            <li><a href="Login_Registration.html">Apply</a></li>
+                            <li><a href="Login_Registration.html">Login</a></li>
+                        </div>    
+                    </ul>
+                </nav>    
+            </header>
+            
+            <div id="floorplan-container">
+                <div id="fpimage-container">
+                    <img class="floorplan" src="floorplans-images/1B1B.png" style="width: 100%; height: 100%;">
+                    <img class="floorplan" src="floorplans-images/2B2B.png" style="width: 100%; height: 100%;">
+                    
+                    <button class="left" onclick="plusDivs(-1)">&#10094;</button>
+                    <button class="right" onclick="plusDivs(+1)">&#10095;</button>        
+                </div>
+                <script>
+                   var slideIndex = 1;
+                    showDivs(slideIndex);
+
+                    function plusDivs(n) {
+                        showDivs(slideIndex += n);
+                    }
+
+                    function showDivs(n) {
+                        var i;
+                        var x = document.getElementsByClassName("floorplan");
+                        if (n > x.length) {slideIndex = 1}
+                        if (n < 1) {slideIndex = x.length}
+                        for (i = 0; i < x.length; i++) {
+                            x[i].style.display = "none";  
+                        }
+                        x[slideIndex-1].style.display = "block";  
+                    }    
+                </script>
+                <div id="floorplan-info">
+                    <h2>LEASE NOW</h2>
+                    <p>We have a few apartments that would be great for you 
+                        and your family. Apply now and join the BANDYL family.</p>
+                    <div id="fpinfo-button">
+                        <a href="Login_Registration.html">Apply</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="contact-container">
+                <div id="contact-info">
+                    <h2>Find us here</h2>
+                    <div id="contact-text">
+                        <p>
+                            <strong>BANDYL Apartments</strong><br>
+                            Some Address Rd<br>
+                            Statesboro, GA<br>
+                            <strong>Office Hours</strong><br>
+                            Monday-Friday<br>
+                            9:00am - 6:00pm<br>
+                            Saturday and Friday closed
+                        </p>
+                    </div>
+                </div>
+                <div id="map">
+                    <script
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4ndVCpfCdeJcpdhVd0nz8icnSuCI6LMo&callback=initMap&libraries=&v=weekly"
+                        async
+                    ></script>
+                </div>
+            </div>
+
+            <div id="apply-container">
+                <div id="apply-question">
+                    <h2>Do you like what you see?</h2>
+                    <div id="apply-statement">
+                        Apply now to lease an apartment with us. 
+                    </div>
+                </div>
+                <div id="apply-button">
+                    <a href="Login_Registration.html">Apply Now</a>
+                </div>
+            </div>
+
+        </div>
+
+            
+    </body>
+</html>
