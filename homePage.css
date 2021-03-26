@@ -1,0 +1,95 @@
+body {
+    background-color:  black;
+    margin: 0px 0px;
+}
+
+#header-container {
+    background-color: white;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    z-index: 1;
+}
+
+#header-container > #logo-container {
+    text-align: center; 
+    width: 25%;
+}
+
+#header-container > #nav-access {
+    text-align: center;
+    position: fixed;
+    width: 50%;
+    left: 850px;
+    top: 35px;
+}
+
+#logo-container > h1{
+    font-size: 50px;
+}
+
+#menu-container > li {
+    display: inline-block;
+    top: 35px;
+    right: 20px;
+    font-size: 20px
+}
+
+li a {
+    padding: 10px;
+}
+
+a{
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+}
+
+a:hover, a:visited{
+    text-decoration: none;
+}
+
+
+#floorplan-container {
+    position: absolute;
+    top: 125.5px;
+    height: 75%;
+    width: 100%;
+    background-color: rgb(61, 59, 59);
+}
+
+#floorplan-container > #fpimage {
+    height: 100%;
+    width: 75%;
+}
+
+#fpimage > .floorplan {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+#contact-container {
+    position: absolute;
+    top: 95%;
+    height: 200px;
+    width: 100%;
+    background-color: white;
+}
+
+#apply-container {
+    position: absolute;
+    top: 125%;
+    width: 100%;
+    height: 125px;
+    background-color: white;
+}
+
+
+
+
+
+
+
+
